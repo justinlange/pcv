@@ -1,0 +1,3 @@
+ofxKinect
+ofxOpenCv
+ofxOculusRift

@@ -508,6 +508,20 @@ void testApp::prepPointCloud() {
 			}
 		}
 	}
+    
+#ifdef USE_TWO_KINECTS
+    ofMesh mesh2;
+	mesh2.setMode(OF_PRIMITIVE_POINTS);
+	for(int y = 0; y < h; y += step) {
+		for(int x = 0; x < w; x += step) {
+			if(kinect2.getDistanceAt(x, y) > 0) {
+				mesh2.addColor(kinect2.getColorAt(x,y));
+				mesh2.addVertex(kinect2.getWorldCoordinateAt(x, y));
+			}
+		}
+	}
+#endif
+    
 }
 
 void testApp::drawPointCloud(){
@@ -520,4 +534,20 @@ void testApp::drawPointCloud(){
 	mesh.drawVertices();
 	ofDisableDepthTest();
 	ofPopMatrix();
+    
+    
+#ifdef USE_TWO_KINECTS
+	ofPushMatrix();
+
+    //need to rotate and translate the 2nd kinect into position
+    
+	ofScale(1, -1, -1);
+	ofTranslate(0, 0, -1000); // center the points a bit
+	ofEnableDepthTest();
+	mesh2.drawVertices();
+	ofDisableDepthTest();
+	ofPopMatrix();
+#endif
+
+
 }

@@ -79,6 +79,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		119FA0B818B169D100E8B898 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 119FA09918B169D100E8B898 /* example-export-vertexcolor-to-texture.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4B69B5B0A3A1756003C02F2;
+			remoteInfo = "example-export-vertexcolor-to-texture";
+		};
+		119FA0BB18B169D100E8B898 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 119FA0A618B169D100E8B898 /* example-objLoad.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4B69B5B0A3A1756003C02F2;
+			remoteInfo = "example-objLoad";
+		};
 		E4328147138ABC890047C5CB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */;
@@ -123,6 +137,26 @@
 		0CF0AA3895D28E97D8A1E4A9 /* ground_truth.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ground_truth.h; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/flann/ground_truth.h; sourceTree = SOURCE_ROOT; };
 		0D080299FB319E35B254E142 /* OVR_Log.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = OVR_Log.cpp; path = ../../../addons/ofxOculusRift/libs/LibOVR/Src/Kernel/OVR_Log.cpp; sourceTree = SOURCE_ROOT; };
 		114B872696817CC33990FC83 /* imgproc.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = imgproc.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/imgproc/imgproc.hpp; sourceTree = SOURCE_ROOT; };
+		119FA09518B169D100E8B898 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		119FA09718B169D100E8B898 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		119FA09818B169D100E8B898 /* config.make */ = {isa = PBXFileReference; lastKnownFileType = text; path = config.make; sourceTree = "<group>"; };
+		119FA09918B169D100E8B898 /* example-export-vertexcolor-to-texture.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "example-export-vertexcolor-to-texture.xcodeproj"; sourceTree = "<group>"; };
+		119FA09D18B169D100E8B898 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		119FA09E18B169D100E8B898 /* openFrameworks-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "openFrameworks-Info.plist"; sourceTree = "<group>"; };
+		119FA09F18B169D100E8B898 /* Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
+		119FA0A118B169D100E8B898 /* ofApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofApp.cpp; sourceTree = "<group>"; };
+		119FA0A518B169D100E8B898 /* sphere.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = sphere.obj; sourceTree = "<group>"; };
+		119FA0A618B169D100E8B898 /* example-objLoad.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "example-objLoad.xcodeproj"; sourceTree = "<group>"; };
+		119FA0AA18B169D100E8B898 /* openFrameworks-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "openFrameworks-Info.plist"; sourceTree = "<group>"; };
+		119FA0AB18B169D100E8B898 /* Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
+		119FA0AD18B169D100E8B898 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		119FA0AE18B169D100E8B898 /* testApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = testApp.cpp; sourceTree = "<group>"; };
+		119FA0AF18B169D100E8B898 /* testApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testApp.h; sourceTree = "<group>"; };
+		119FA0B118B169D100E8B898 /* glm.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = glm.c; sourceTree = "<group>"; };
+		119FA0B218B169D100E8B898 /* glm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = glm.h; sourceTree = "<group>"; };
+		119FA0B318B169D100E8B898 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = Readme.md; sourceTree = "<group>"; };
+		119FA0B518B169D100E8B898 /* ofxObjLoader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxObjLoader.cpp; sourceTree = "<group>"; };
+		119FA0B618B169D100E8B898 /* ofxObjLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxObjLoader.h; sourceTree = "<group>"; };
 		1D4E6CF0778424CDED4BE334 /* OVR_JSON.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OVR_JSON.h; path = ../../../addons/ofxOculusRift/libs/LibOVR/Src/OVR_JSON.h; sourceTree = SOURCE_ROOT; };
 		1E95EFD35ED9C5D97F2F015E /* timer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = timer.h; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/flann/timer.h; sourceTree = SOURCE_ROOT; };
 		1F89304DC2296747F70C8020 /* OVR_Atomic.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = OVR_Atomic.cpp; path = ../../../addons/ofxOculusRift/libs/LibOVR/Src/Kernel/OVR_Atomic.cpp; sourceTree = SOURCE_ROOT; };
@@ -417,6 +451,113 @@
 				59626D03C690200AD4E8B3A6 /* ml.hpp */,
 			);
 			name = ml;
+			sourceTree = "<group>";
+		};
+		119FA09418B169D100E8B898 /* ofxObjLoader */ = {
+			isa = PBXGroup;
+			children = (
+				119FA09518B169D100E8B898 /* .gitignore */,
+				119FA09618B169D100E8B898 /* example-export-vertexcolor-to-texture */,
+				119FA0A218B169D100E8B898 /* example-objLoad */,
+				119FA0B018B169D100E8B898 /* libs */,
+				119FA0B318B169D100E8B898 /* Readme.md */,
+				119FA0B418B169D100E8B898 /* src */,
+			);
+			path = ofxObjLoader;
+			sourceTree = "<group>";
+		};
+		119FA09618B169D100E8B898 /* example-export-vertexcolor-to-texture */ = {
+			isa = PBXGroup;
+			children = (
+				119FA09718B169D100E8B898 /* .gitignore */,
+				119FA09818B169D100E8B898 /* config.make */,
+				119FA09918B169D100E8B898 /* example-export-vertexcolor-to-texture.xcodeproj */,
+				119FA09D18B169D100E8B898 /* Makefile */,
+				119FA09E18B169D100E8B898 /* openFrameworks-Info.plist */,
+				119FA09F18B169D100E8B898 /* Project.xcconfig */,
+				119FA0A018B169D100E8B898 /* src */,
+			);
+			path = "example-export-vertexcolor-to-texture";
+			sourceTree = "<group>";
+		};
+		119FA09A18B169D100E8B898 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				119FA0B918B169D100E8B898 /* example-export-vertexcolor-to-textureDebug.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		119FA0A018B169D100E8B898 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				119FA0A118B169D100E8B898 /* ofApp.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		119FA0A218B169D100E8B898 /* example-objLoad */ = {
+			isa = PBXGroup;
+			children = (
+				119FA0A318B169D100E8B898 /* bin */,
+				119FA0A618B169D100E8B898 /* example-objLoad.xcodeproj */,
+				119FA0AA18B169D100E8B898 /* openFrameworks-Info.plist */,
+				119FA0AB18B169D100E8B898 /* Project.xcconfig */,
+				119FA0AC18B169D100E8B898 /* src */,
+			);
+			path = "example-objLoad";
+			sourceTree = "<group>";
+		};
+		119FA0A318B169D100E8B898 /* bin */ = {
+			isa = PBXGroup;
+			children = (
+				119FA0A418B169D100E8B898 /* data */,
+			);
+			path = bin;
+			sourceTree = "<group>";
+		};
+		119FA0A418B169D100E8B898 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				119FA0A518B169D100E8B898 /* sphere.obj */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		119FA0A718B169D100E8B898 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				119FA0BC18B169D100E8B898 /* example-objLoadDebug.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		119FA0AC18B169D100E8B898 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				119FA0AD18B169D100E8B898 /* main.cpp */,
+				119FA0AE18B169D100E8B898 /* testApp.cpp */,
+				119FA0AF18B169D100E8B898 /* testApp.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		119FA0B018B169D100E8B898 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				119FA0B118B169D100E8B898 /* glm.c */,
+				119FA0B218B169D100E8B898 /* glm.h */,
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
+		119FA0B418B169D100E8B898 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				119FA0B518B169D100E8B898 /* ofxObjLoader.cpp */,
+				119FA0B618B169D100E8B898 /* ofxObjLoader.h */,
+			);
+			path = src;
 			sourceTree = "<group>";
 		};
 		170C3384C93B182490DDC9CC /* contrib */ = {
@@ -758,6 +899,7 @@
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				119FA09418B169D100E8B898 /* ofxObjLoader */,
 				D0E2EDD918B11EC9009AEC86 /* ofxObjLoader */,
 				9683228C705CA3FF4F2EA945 /* ofxKinect */,
 				A0B90D3B0ADB9C1716816714 /* ofxOpenCv */,
@@ -1031,6 +1173,14 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 119FA09A18B169D100E8B898 /* Products */;
+					ProjectRef = 119FA09918B169D100E8B898 /* example-export-vertexcolor-to-texture.xcodeproj */;
+				},
+				{
+					ProductGroup = 119FA0A718B169D100E8B898 /* Products */;
+					ProjectRef = 119FA0A618B169D100E8B898 /* example-objLoad.xcodeproj */;
+				},
+				{
 					ProductGroup = E4328144138ABC890047C5CB /* Products */;
 					ProjectRef = E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */;
 				},
@@ -1043,6 +1193,20 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		119FA0B918B169D100E8B898 /* example-export-vertexcolor-to-textureDebug.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "example-export-vertexcolor-to-textureDebug.app";
+			remoteRef = 119FA0B818B169D100E8B898 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		119FA0BC18B169D100E8B898 /* example-objLoadDebug.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "example-objLoadDebug.app";
+			remoteRef = 119FA0BB18B169D100E8B898 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		E4328148138ABC890047C5CB /* openFrameworksDebug.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;

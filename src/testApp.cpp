@@ -11,6 +11,8 @@ void testApp::setup()
     
 //-----------------------Kinect------------------------//
     mesh.setMode(OF_PRIMITIVE_POINTS);
+    mesh2.setMode(OF_PRIMITIVE_POINTS);
+
 
     
     loadKinect = true;
@@ -241,13 +243,13 @@ void testApp::draw()
 
 		oculusRift.beginLeftEye();
 		//drawScene();
-        drawCow();
+        //drawCow();
         drawPointCloud();
 		oculusRift.endLeftEye();
 		
 		oculusRift.beginRightEye();
 		//drawScene();
-        drawCow();
+        //drawCow();
         drawPointCloud();
 		oculusRift.endRightEye();
 		
@@ -517,8 +519,8 @@ void testApp::prepPointCloud() {
 	}
     
 #ifdef USE_TWO_KINECTS
-    ofMesh mesh2;
-	mesh2.setMode(OF_PRIMITIVE_POINTS);
+    mesh2.clear();
+    
 	for(int y = 0; y < h; y += step) {
 		for(int x = 0; x < w; x += step) {
 			if(kinect2.getDistanceAt(x, y) > 0) {

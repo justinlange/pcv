@@ -6,6 +6,8 @@
 #include "ofxOpenCv.h"
 #include "ofxObjLoader.h"
 
+#define USE_TWO_KINECTS
+
 
 typedef struct{
 	ofColor color;
@@ -72,6 +74,7 @@ class testApp : public ofBaseApp
     
 #ifdef USE_TWO_KINECTS
 	ofxKinect kinect2;
+    ofMesh mesh2;
 #endif
 	
 	ofxCvColorImage colorImg;

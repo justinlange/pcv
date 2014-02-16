@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>CBB31DFC-EA6C-4CB5-AD78-BD4608B422C3</string>
+	<key>IDESourceControlProjectName</key>
+	<string>pointCloudViewer</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>A0EB3CE5-3EC4-4CF4-8FE3-DE9CB69848DD</key>
+		<string>https://github.com/andreasmuller/ofxOculusRift.git</string>
+		<key>D8228FAF-2ECF-4D2B-811A-EECDD29109F0</key>
+		<string>https://github.com/satoruhiga/ofxObjLoader.git</string>
+		<key>E694FEDE-530D-4F7B-BB6F-8FB59B8C56EC</key>
+		<string>https://github.com/justinlange/pcv.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>pointCloudViewer.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>51DDE101-79BB-43FD-A010-5B38EF5F365F</key>
+		<string>../../../../../addons</string>
+		<key>A0EB3CE5-3EC4-4CF4-8FE3-DE9CB69848DD</key>
+		<string>../../../../../addons/ofxOculusRift</string>
+		<key>D8228FAF-2ECF-4D2B-811A-EECDD29109F0</key>
+		<string>../../../../../addons/ofxObjLoader</string>
+		<key>E694FEDE-530D-4F7B-BB6F-8FB59B8C56EC</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/justinlange/pcv.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E694FEDE-530D-4F7B-BB6F-8FB59B8C56EC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D8228FAF-2ECF-4D2B-811A-EECDD29109F0</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ofxObjLoader</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>A0EB3CE5-3EC4-4CF4-8FE3-DE9CB69848DD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ofxOculusRift</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E694FEDE-530D-4F7B-BB6F-8FB59B8C56EC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>pointCloudViewer</string>
+		</dict>
+	</array>
+</dict>
+</plist>

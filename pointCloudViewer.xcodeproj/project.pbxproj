@@ -42,6 +42,8 @@
 		C0C79797EA45D37EF18C4C7D /* tinyxml2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BB97B94797A16D64A60B8AA4 /* tinyxml2.cpp */; };
 		C4972011ADA6B9E8D1EDB5AF /* OVR_OSX_HMDDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 837FB7D4184AE864FC8A2DC8 /* OVR_OSX_HMDDevice.cpp */; };
 		C93AC922A96A87E7389090C5 /* OVR_Atomic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F89304DC2296747F70C8020 /* OVR_Atomic.cpp */; };
+		D0E2EE0218B121AD009AEC86 /* ofxObjLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0E2EDFA18B11EC9009AEC86 /* ofxObjLoader.cpp */; };
+		D0E2EE0318B121B7009AEC86 /* glm.c in Sources */ = {isa = PBXBuildFile; fileRef = D0E2EDF618B11EC9009AEC86 /* glm.c */; };
 		D31F5C1B140C59B2AF1533A8 /* registration.c in Sources */ = {isa = PBXBuildFile; fileRef = 71958293AC5292DE4B7C619D /* registration.c */; };
 		D3301F6A0B43BB293ED97C1D /* ofxCvShortImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8A4DD23693DFAB8EC05FAA5D /* ofxCvShortImage.cpp */; };
 		D53BB62F01C90D26D9EB4D8D /* OVR_System.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3852E0057150A2D60FD7E473 /* OVR_System.cpp */; };
@@ -269,6 +271,10 @@
 		CE9C7160245B19131DAE6128 /* ofxCvColorImage.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxCvColorImage.cpp; path = ../../../addons/ofxOpenCv/src/ofxCvColorImage.cpp; sourceTree = SOURCE_ROOT; };
 		CF29BFB3FD3CAA54F336E6FD /* cvaux.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = cvaux.hpp; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv/cvaux.hpp; sourceTree = SOURCE_ROOT; };
 		CF528C0E8DBFF5C31E8D6529 /* core.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 30; name = core.c; path = ../../../addons/ofxKinect/libs/libfreenect/src/core.c; sourceTree = SOURCE_ROOT; };
+		D0E2EDF618B11EC9009AEC86 /* glm.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = glm.c; sourceTree = "<group>"; };
+		D0E2EDF718B11EC9009AEC86 /* glm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = glm.h; sourceTree = "<group>"; };
+		D0E2EDFA18B11EC9009AEC86 /* ofxObjLoader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxObjLoader.cpp; sourceTree = "<group>"; };
+		D0E2EDFB18B11EC9009AEC86 /* ofxObjLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxObjLoader.h; sourceTree = "<group>"; };
 		D3671FDA80DE05E0AF1910E9 /* OVR_Device.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OVR_Device.h; path = ../../../addons/ofxOculusRift/libs/LibOVR/Src/OVR_Device.h; sourceTree = SOURCE_ROOT; };
 		D4F22083BE25612FC2BFC0D9 /* OVR_String.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = OVR_String.cpp; path = ../../../addons/ofxOculusRift/libs/LibOVR/Src/Kernel/OVR_String.cpp; sourceTree = SOURCE_ROOT; };
 		D5A3AFF36064B2CACAD31716 /* composite_index.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = composite_index.h; path = ../../../addons/ofxOpenCv/libs/opencv/include/opencv2/flann/composite_index.h; sourceTree = SOURCE_ROOT; };
@@ -752,6 +758,7 @@
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				D0E2EDD918B11EC9009AEC86 /* ofxObjLoader */,
 				9683228C705CA3FF4F2EA945 /* ofxKinect */,
 				A0B90D3B0ADB9C1716816714 /* ofxOpenCv */,
 				DCD46EAAB39931819E40F820 /* ofxOculusRift */,
@@ -830,6 +837,34 @@
 				97CFAD0B2F2DB004A8A3BC0B /* objdetect.hpp */,
 			);
 			name = objdetect;
+			sourceTree = "<group>";
+		};
+		D0E2EDD918B11EC9009AEC86 /* ofxObjLoader */ = {
+			isa = PBXGroup;
+			children = (
+				D0E2EDF518B11EC9009AEC86 /* libs */,
+				D0E2EDF918B11EC9009AEC86 /* src */,
+			);
+			name = ofxObjLoader;
+			path = ../../../addons/ofxObjLoader;
+			sourceTree = "<group>";
+		};
+		D0E2EDF518B11EC9009AEC86 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				D0E2EDF618B11EC9009AEC86 /* glm.c */,
+				D0E2EDF718B11EC9009AEC86 /* glm.h */,
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
+		D0E2EDF918B11EC9009AEC86 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				D0E2EDFA18B11EC9009AEC86 /* ofxObjLoader.cpp */,
+				D0E2EDFB18B11EC9009AEC86 /* ofxObjLoader.h */,
+			);
+			path = src;
 			sourceTree = "<group>";
 		};
 		DCC60D6724B56635AE867535 /* libs */ = {
@@ -1038,6 +1073,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0E2EE0318B121B7009AEC86 /* glm.c in Sources */,
+				D0E2EE0218B121AD009AEC86 /* ofxObjLoader.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* testApp.cpp in Sources */,
 				686B0DF6249B52E1A85B39EC /* ofxKinect.cpp in Sources */,
@@ -1172,7 +1209,7 @@
 					../../../addons/ofxOculusRift/libs/LibOVR/Src/Util,
 					../../../addons/ofxOculusRift/src,
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				OTHER_CPLUSPLUSFLAGS = (
 					"-D__MACOSX_CORE__",
 					"-lpthread",
@@ -1259,7 +1296,7 @@
 					../../../addons/ofxOculusRift/libs/LibOVR/Src/Util,
 					../../../addons/ofxOculusRift/src,
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				OTHER_CPLUSPLUSFLAGS = (
 					"-D__MACOSX_CORE__",
 					"-lpthread",
@@ -1287,6 +1324,59 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_MODEL_TUNING = NONE;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					../../../addons/ofxKinect/libs,
+					../../../addons/ofxKinect/libs/libfreenect,
+					../../../addons/ofxKinect/libs/libfreenect/include,
+					../../../addons/ofxKinect/libs/libfreenect/platform,
+					../../../addons/ofxKinect/libs/libfreenect/src,
+					"../../../addons/ofxKinect/libs/libusb-1.0",
+					"../../../addons/ofxKinect/libs/libusb-1.0/include",
+					"../../../addons/ofxKinect/libs/libusb-1.0/include/libusb-1.0",
+					"../../../addons/ofxKinect/libs/libusb-1.0/lib",
+					"../../../addons/ofxKinect/libs/libusb-1.0/lib/osx",
+					"../../../addons/ofxKinect/libs/libusb-win32",
+					../../../addons/ofxKinect/src,
+					../../../addons/ofxOpenCv/libs,
+					../../../addons/ofxOpenCv/libs/opencv,
+					../../../addons/ofxOpenCv/libs/opencv/include,
+					../../../addons/ofxOpenCv/libs/opencv/include/opencv,
+					../../../addons/ofxOpenCv/libs/opencv/include/opencv2,
+					../../../addons/ofxOpenCv/libs/opencv/include/opencv2/calib3d,
+					../../../addons/ofxOpenCv/libs/opencv/include/opencv2/contrib,
+					../../../addons/ofxOpenCv/libs/opencv/include/opencv2/core,
+					../../../addons/ofxOpenCv/libs/opencv/include/opencv2/features2d,
+					../../../addons/ofxOpenCv/libs/opencv/include/opencv2/flann,
+					../../../addons/ofxOpenCv/libs/opencv/include/opencv2/gpu,
+					../../../addons/ofxOpenCv/libs/opencv/include/opencv2/highgui,
+					../../../addons/ofxOpenCv/libs/opencv/include/opencv2/imgproc,
+					../../../addons/ofxOpenCv/libs/opencv/include/opencv2/legacy,
+					../../../addons/ofxOpenCv/libs/opencv/include/opencv2/ml,
+					../../../addons/ofxOpenCv/libs/opencv/include/opencv2/objdetect,
+					../../../addons/ofxOpenCv/libs/opencv/include/opencv2/ts,
+					../../../addons/ofxOpenCv/libs/opencv/include/opencv2/video,
+					../../../addons/ofxOpenCv/libs/opencv/lib,
+					../../../addons/ofxOpenCv/libs/opencv/lib/osx,
+					../../../addons/ofxOpenCv/src,
+					../../../addons/ofxOculusRift/libs,
+					../../../addons/ofxOculusRift/libs/3rdParty,
+					../../../addons/ofxOculusRift/libs/3rdParty/TinyXml,
+					../../../addons/ofxOculusRift/libs/LibOVR,
+					../../../addons/ofxOculusRift/libs/LibOVR/Include,
+					../../../addons/ofxOculusRift/libs/LibOVR/Lib,
+					../../../addons/ofxOculusRift/libs/LibOVR/Lib/MacOS,
+					../../../addons/ofxOculusRift/libs/LibOVR/Lib/MacOS/Debug,
+					../../../addons/ofxOculusRift/libs/LibOVR/Lib/MacOS/Release,
+					../../../addons/ofxOculusRift/libs/LibOVR/Lib/Win32,
+					../../../addons/ofxOculusRift/libs/LibOVR/Lib/x64,
+					../../../addons/ofxOculusRift/libs/LibOVR/Src,
+					../../../addons/ofxOculusRift/libs/LibOVR/Src/Kernel,
+					../../../addons/ofxOculusRift/libs/LibOVR/Src/Util,
+					../../../addons/ofxOculusRift/src,
+					../../../addons/ofxObjLoader/src,
+					../../../addons/ofxObjLoader/libs,
+				);
 				ICON = "$(ICON_NAME_DEBUG)";
 				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
 				INFOPLIST_FILE = "openFrameworks-Info.plist";
@@ -1374,6 +1464,59 @@
 				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../libs/glut/lib/osx\"";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_MODEL_TUNING = NONE;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					../../../addons/ofxKinect/libs,
+					../../../addons/ofxKinect/libs/libfreenect,
+					../../../addons/ofxKinect/libs/libfreenect/include,
+					../../../addons/ofxKinect/libs/libfreenect/platform,
+					../../../addons/ofxKinect/libs/libfreenect/src,
+					"../../../addons/ofxKinect/libs/libusb-1.0",
+					"../../../addons/ofxKinect/libs/libusb-1.0/include",
+					"../../../addons/ofxKinect/libs/libusb-1.0/include/libusb-1.0",
+					"../../../addons/ofxKinect/libs/libusb-1.0/lib",
+					"../../../addons/ofxKinect/libs/libusb-1.0/lib/osx",
+					"../../../addons/ofxKinect/libs/libusb-win32",
+					../../../addons/ofxKinect/src,
+					../../../addons/ofxOpenCv/libs,
+					../../../addons/ofxOpenCv/libs/opencv,
+					../../../addons/ofxOpenCv/libs/opencv/include,
+					../../../addons/ofxOpenCv/libs/opencv/include/opencv,
+					../../../addons/ofxOpenCv/libs/opencv/include/opencv2,
+					../../../addons/ofxOpenCv/libs/opencv/include/opencv2/calib3d,
+					../../../addons/ofxOpenCv/libs/opencv/include/opencv2/contrib,
+					../../../addons/ofxOpenCv/libs/opencv/include/opencv2/core,
+					../../../addons/ofxOpenCv/libs/opencv/include/opencv2/features2d,
+					../../../addons/ofxOpenCv/libs/opencv/include/opencv2/flann,
+					../../../addons/ofxOpenCv/libs/opencv/include/opencv2/gpu,
+					../../../addons/ofxOpenCv/libs/opencv/include/opencv2/highgui,
+					../../../addons/ofxOpenCv/libs/opencv/include/opencv2/imgproc,
+					../../../addons/ofxOpenCv/libs/opencv/include/opencv2/legacy,
+					../../../addons/ofxOpenCv/libs/opencv/include/opencv2/ml,
+					../../../addons/ofxOpenCv/libs/opencv/include/opencv2/objdetect,
+					../../../addons/ofxOpenCv/libs/opencv/include/opencv2/ts,
+					../../../addons/ofxOpenCv/libs/opencv/include/opencv2/video,
+					../../../addons/ofxOpenCv/libs/opencv/lib,
+					../../../addons/ofxOpenCv/libs/opencv/lib/osx,
+					../../../addons/ofxOpenCv/src,
+					../../../addons/ofxOculusRift/libs,
+					../../../addons/ofxOculusRift/libs/3rdParty,
+					../../../addons/ofxOculusRift/libs/3rdParty/TinyXml,
+					../../../addons/ofxOculusRift/libs/LibOVR,
+					../../../addons/ofxOculusRift/libs/LibOVR/Include,
+					../../../addons/ofxOculusRift/libs/LibOVR/Lib,
+					../../../addons/ofxOculusRift/libs/LibOVR/Lib/MacOS,
+					../../../addons/ofxOculusRift/libs/LibOVR/Lib/MacOS/Debug,
+					../../../addons/ofxOculusRift/libs/LibOVR/Lib/MacOS/Release,
+					../../../addons/ofxOculusRift/libs/LibOVR/Lib/Win32,
+					../../../addons/ofxOculusRift/libs/LibOVR/Lib/x64,
+					../../../addons/ofxOculusRift/libs/LibOVR/Src,
+					../../../addons/ofxOculusRift/libs/LibOVR/Src/Kernel,
+					../../../addons/ofxOculusRift/libs/LibOVR/Src/Util,
+					../../../addons/ofxOculusRift/src,
+					../../../addons/ofxObjLoader/src,
+					../../../addons/ofxObjLoader/libs,
+				);
 				ICON = "$(ICON_NAME_RELEASE)";
 				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
 				INFOPLIST_FILE = "openFrameworks-Info.plist";

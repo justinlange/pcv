@@ -4,6 +4,8 @@
 #include "ofxOculusRift.h"
 #include "ofxKinect.h"
 #include "ofxOpenCv.h"
+#include "ofxObjLoader.h"
+
 
 typedef struct{
 	ofColor color;
@@ -77,6 +79,13 @@ class testApp : public ofBaseApp
 	ofxCvGrayscaleImage grayImage; // grayscale depth image
 	ofxCvGrayscaleImage grayThreshNear; // the near thresholded image
 	ofxCvGrayscaleImage grayThreshFar; // the far thresholded image
+    
+    //-------OBJ--------//
+    
+    void loadCow();
+    ofMesh objFile;
+    void drawCow();
+
 	
 
 };

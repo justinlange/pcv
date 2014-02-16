@@ -1,8 +1,13 @@
 #include "testApp.h"
 
-//--------------------------------------------------------------
+
 void testApp::setup()
 {
+
+//-----------------------OBJ------------------------//
+
+    loadCow();
+    
     
 //-----------------------Kinect------------------------//
     mesh.setMode(OF_PRIMITIVE_POINTS);
@@ -64,7 +69,7 @@ void testApp::setup()
 	bDrawPointCloud = false;
 
 
-    //------RIFT-------//
+//------------------RIFT-------------------//
 
 	ofBackground(0);
 	ofSetLogLevel( OF_LOG_VERBOSE );
@@ -236,11 +241,13 @@ void testApp::draw()
 
 		oculusRift.beginLeftEye();
 		//drawScene();
+        drawCow();
         drawPointCloud();
 		oculusRift.endLeftEye();
 		
 		oculusRift.beginRightEye();
 		//drawScene();
+        drawCow();
         drawPointCloud();
 		oculusRift.endRightEye();
 		
@@ -549,5 +556,16 @@ void testApp::drawPointCloud(){
 	ofPopMatrix();
 #endif
 
+}
 
+void testApp::loadCow(){
+    ofxObjLoader::load("cow.obj", objFile);
+
+}
+
+void testApp::drawCow(){
+    ofPushMatrix();
+    ofScale(100,100,100);
+    objFile.draw();
+    ofPopMatrix();
 }

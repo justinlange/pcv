@@ -5,6 +5,8 @@ void testApp::setup()
 {
     
 //-----------------------Kinect------------------------//
+    mesh.setMode(OF_PRIMITIVE_POINTS);
+
     
     loadKinect = true;
     
@@ -48,9 +50,9 @@ void testApp::setup()
 	grayThreshNear.allocate(kinect.width, kinect.height);
 	grayThreshFar.allocate(kinect.width, kinect.height);
 	
-	nearThreshold = 230;
-	farThreshold = 70;
-	bThreshWithOpenCV = true;
+	nearThreshold = 255;
+	farThreshold = 0;
+	bThreshWithOpenCV = false;
 	
 	ofSetFrameRate(60);
 	
@@ -186,12 +188,16 @@ void testApp::draw()
         ofRotateY(rotateY);
 		easyCam.end();
 	} else {
+        /*
+        
 		// draw from the live kinect
 		kinect.drawDepth(10, 10, 400, 300);
 		kinect.draw(420, 10, 400, 300);
 		
 		grayImage.draw(10, 320, 400, 300);
 		//contourFinder.draw(10, 320, 400, 300);
+         
+         */
 		
 #ifdef USE_TWO_KINECTS
 		kinect2.draw(420, 320, 400, 300);
@@ -224,7 +230,10 @@ void testApp::draw()
 			oculusRift.endOverlay();
 		}
         
+        
 		glEnable(GL_DEPTH_TEST);
+        prepPointCloud();
+
 		oculusRift.beginLeftEye();
 		//drawScene();
         drawPointCloud();
@@ -244,6 +253,34 @@ void testApp::draw()
 		drawScene();
 		cam.end();
 	}
+    
+    // draw instructions
+	ofSetColor(255, 255, 255);
+	stringstream reportStream;
+    
+    if(kinect.hasAccelControl()) {
+        reportStream << "accel is: " << ofToString(kinect.getMksAccel().x, 2) << " / "
+        << ofToString(kinect.getMksAccel().y, 2) << " / "
+        << ofToString(kinect.getMksAccel().z, 2) << endl;
+    } else {
+        reportStream << "Note: this is a newer Xbox Kinect or Kinect For Windows device," << endl
+		<< "motor / led / accel controls are not currently supported" << endl << endl;
+    }
+    
+	reportStream << "press p to switch between images and point cloud, rotate the point cloud with the mouse" << endl
+	<< "using opencv threshold = " << bThreshWithOpenCV <<" (press spacebar)" << endl
+	<< "set near threshold " << nearThreshold << " (press: + -)" << endl
+	<< "set far threshold " << farThreshold << " (press: < >) num blobs found " << contourFinder.nBlobs
+	<< ", fps: " << ofGetFrameRate() << endl
+	<< "press c to close the connection and o to open it again, connection is: " << kinect.isConnected() << endl;
+    
+    if(kinect.hasCamTiltControl()) {
+    	reportStream << "press UP and DOWN to change the tilt angle: " << angle << " degrees" << endl
+        << "press 1-5 & 0 to change the led mode" << endl;
+    }
+    
+	ofDrawBitmapString(reportStream.str(), 20, 652);
+
 	
 }
 
@@ -457,11 +494,11 @@ void testApp::dragEvent(ofDragInfo dragInfo)
 }
 
 //--------------------------------------------------------------
-void testApp::drawPointCloud() {
+void testApp::prepPointCloud() {
+    mesh.clear();
+    
 	int w = 640;
 	int h = 480;
-	ofMesh mesh;
-	mesh.setMode(OF_PRIMITIVE_POINTS);
 	int step = 2;
 	for(int y = 0; y < h; y += step) {
 		for(int x = 0; x < w; x += step) {
@@ -471,6 +508,9 @@ void testApp::drawPointCloud() {
 			}
 		}
 	}
+}
+
+void testApp::drawPointCloud(){
 	glPointSize(3);
 	ofPushMatrix();
 	// the projected points are 'upside down' and 'backwards'

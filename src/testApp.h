@@ -48,8 +48,10 @@ class testApp : public ofBaseApp
     ofVec3f demoRift;
     
     //-------kinect-------//
-    ofxKinect kinect;
     ofMesh mesh;
+    
+    void prepPointCloud();
+    ofxKinect kinect;
     ofEasyCam easyCam;
     
     void drawPointCloud();

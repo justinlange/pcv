@@ -11,7 +11,14 @@ void testApp::setup()
     
 //-----------------------Kinect------------------------//
     mesh.setMode(OF_PRIMITIVE_POINTS);
+
+#ifdef USE_TWO_KINECTS
     mesh2.setMode(OF_PRIMITIVE_POINTS);
+#endif
+
+#ifdef USE_THREE_KINECTS
+    mesh3.setMode(OF_PRIMITIVE_POINTS);
+#endif
 
 
     
@@ -50,6 +57,11 @@ void testApp::setup()
 #ifdef USE_TWO_KINECTS
 	kinect2.init();
 	kinect2.open();
+#endif
+#ifdef USE_THREE_KINECTS
+	kinect3.init();
+	kinect3.open();
+    kinect3.setCameraTiltAngle(angle);
 #endif
 	
 	colorImg.allocate(kinect.width, kinect.height);
@@ -157,6 +169,9 @@ void testApp::update()
 #ifdef USE_TWO_KINECTS
 	kinect2.update();
 #endif
+#ifdef USE_THREE_KINECTS
+	kinect3.update();
+#endif
 
 //-----------------------RIFT------------------------//
     
@@ -185,31 +200,6 @@ void testApp::draw()
 {
     
 //-----------------------Kinect------------------------//
-
-    
-    ofSetColor(255, 255, 255);
-	
-	if(bDrawPointCloud) {
-		easyCam.begin();
-		drawPointCloud();
-        ofRotateY(rotateY);
-		easyCam.end();
-	} else {
-        /*
-        
-		// draw from the live kinect
-		kinect.drawDepth(10, 10, 400, 300);
-		kinect.draw(420, 10, 400, 300);
-		
-		grayImage.draw(10, 320, 400, 300);
-		//contourFinder.draw(10, 320, 400, 300);
-         
-         */
-		
-#ifdef USE_TWO_KINECTS
-		kinect2.draw(420, 320, 400, 300);
-#endif
-	}
 
     
 //-----------------------RIFT------------------------//
@@ -414,15 +404,15 @@ void testApp::keyPressed(int key)
 			break;
 			
 		case '1':
-			kinect.setLed(ofxKinect::LED_GREEN);
+			kinect.setLed(ofxKinect::LED_RED);
 			break;
 			
 		case '2':
-			kinect.setLed(ofxKinect::LED_YELLOW);
+           // kinect2.setLed(ofxKinect::LED_RED);
 			break;
 			
 		case '3':
-			kinect.setLed(ofxKinect::LED_RED);
+			kinect3.setLed(ofxKinect::LED_RED);
 			break;
 			
 		case '4':
@@ -531,6 +521,19 @@ void testApp::prepPointCloud() {
 	}
 #endif
     
+#ifdef USE_THREE_KINECTS
+    mesh3.clear();
+    
+	for(int y = 0; y < h; y += step) {
+		for(int x = 0; x < w; x += step) {
+			if(kinect3.getDistanceAt(x, y) > 0) {
+				mesh3.addColor(kinect3.getColorAt(x,y));
+				mesh3.addVertex(kinect3.getWorldCoordinateAt(x, y));
+			}
+		}
+	}
+#endif
+    
 }
 
 void testApp::drawPointCloud(){
@@ -557,7 +560,35 @@ void testApp::drawPointCloud(){
 	ofDisableDepthTest();
 	ofPopMatrix();
 #endif
+    
+    
+#ifdef USE_THREE_KINECTS
+	ofPushMatrix();
+    
+    //need to rotate and translate the 3rd kinect into position
+    
+	ofScale(1, -1, -1);
+	ofTranslate(0, 0, -1000); // center the points a bit
+	ofEnableDepthTest();
+	mesh3.drawVertices();
+	ofDisableDepthTest();
+	ofPopMatrix();
+#endif
 
+}
+
+void testApp::exit() {
+	kinect.setCameraTiltAngle(5); // zero the tilt on exit
+	kinect.close();
+	
+#ifdef USE_TWO_KINECTS
+    kinect2.setCameraTiltAngle(10); // zero the tilt on exit
+	kinect2.close();
+#endif
+#ifdef USE_THREE_KINECTS
+    kinect3.setCameraTiltAngle(20); // zero the tilt on exit
+	kinect3.close();
+#endif
 }
 
 void testApp::loadCow(){

@@ -7,6 +7,8 @@
 #include "ofxObjLoader.h"
 
 #define USE_TWO_KINECTS
+#define USE_THREE_KINECTS
+
 
 
 typedef struct{
@@ -36,6 +38,7 @@ class testApp : public ofBaseApp
 	void windowResized(int w, int h);
 	void dragEvent(ofDragInfo dragInfo);
 	void gotMessage(ofMessage msg);
+    void exit();
 
 	ofxOculusRift		oculusRift;
 
@@ -75,6 +78,10 @@ class testApp : public ofBaseApp
 #ifdef USE_TWO_KINECTS
 	ofxKinect kinect2;
     ofMesh mesh2;
+#endif
+#ifdef USE_THREE_KINECTS
+	ofxKinect kinect3;
+    ofMesh mesh3;
 #endif
 	
 	ofxCvColorImage colorImg;

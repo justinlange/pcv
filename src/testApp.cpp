@@ -3,6 +3,8 @@
 
 void testApp::setup()
 {
+    
+    shader.load("meshExtrude");
 
 //-----------------------OBJ------------------------//
 
@@ -10,6 +12,21 @@ void testApp::setup()
     
     
 //-----------------------Kinect------------------------//
+    
+    //prep shader
+    int w = 640;
+	int h = 480;
+	for(int y = 0; y < h; y ++) {
+		for(int x = 0; x < w; x ++) {
+				mesh.addVertex(ofVec3f(x,y,0));
+                mesh.addTexCoord(ofVec2f(x,y));
+			}
+		}
+	
+
+    
+    
+    
     mesh.setMode(OF_PRIMITIVE_POINTS);
 
 #ifdef USE_TWO_KINECTS
@@ -412,7 +429,7 @@ void testApp::keyPressed(int key)
 			break;
 			
 		case '3':
-			kinect3.setLed(ofxKinect::LED_RED);
+			//kinect3.setLed(ofxKinect::LED_RED);
 			break;
 			
 		case '4':
@@ -494,6 +511,8 @@ void testApp::dragEvent(ofDragInfo dragInfo)
 
 //--------------------------------------------------------------
 void testApp::prepPointCloud() {
+    
+    /*
     mesh.clear();
     
 	int w = 640;
@@ -507,6 +526,17 @@ void testApp::prepPointCloud() {
 			}
 		}
 	}
+     */
+    
+    //--shader
+    
+    shader.begin();
+    shader.setUniformTexture("depthImage", kinect.getDepthTextureReference(), 0);
+    shader.setUniformTexture("image", kinect.getTextureReference(), 1);
+    mesh.draw();
+    shader.end();
+    
+    
     
 #ifdef USE_TWO_KINECTS
     mesh2.clear();

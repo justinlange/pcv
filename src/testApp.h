@@ -6,8 +6,8 @@
 #include "ofxOpenCv.h"
 #include "ofxObjLoader.h"
 
-#define USE_TWO_KINECTS
-#define USE_THREE_KINECTS
+//#define USE_TWO_KINECTS
+//#define USE_THREE_KINECTS
 
 
 
@@ -95,6 +95,8 @@ class testApp : public ofBaseApp
     void loadCow();
     ofMesh objFile;
     void drawCow();
+    
+    ofShader shader;
 
 	
 
